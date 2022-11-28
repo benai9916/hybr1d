@@ -10,17 +10,19 @@ const auth = async (req, res, next) => {
       return res.status(401).json(error("unauthorized", res.statusCode));
     const verify = jwt.verify(token, process.env.SECRET_KEY);
 
-    const user = await prisma.auth.findFirst(({
-      where:{id: verify.id}
-    }))
-    if(user) {
+    const user = await prisma.auth.findFirst({
+      where: { id: verify.id },
+    });
+    if (user) {
+      req.id = user.id;
+      req.userType = user.userType;
       next();
     } else {
       return res.status(401).json(error("unauthorized", res.statusCode));
     }
   } catch (err) {
-    console.log(err)
-    next(err)
+    console.log(err);
+    next(err);
   }
 };
 

@@ -23,8 +23,8 @@ model Catalog {
   id     Int     @id @default(autoincrement())
   name   String
   price  Float
-  auth   Auth    @relation(fields: [userId], references: [id])
-  userId Int
+  auth   Auth    @relation(fields: [sellerId], references: [id])
+  sellerId Int
   order  Order[]
 }
 

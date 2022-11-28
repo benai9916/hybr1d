@@ -25,9 +25,13 @@ const login = async (req, res, next) => {
         .json(error("User does not exists", res.statusCode));
     }
     // log user in
-    const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, {
-      expiresIn: "2h",
-    });
+    const token = jwt.sign(
+      { id: user.id, userType: user.userType },
+      process.env.SECRET_KEY,
+      {
+        expiresIn: "2h",
+      }
+    );
 
     return res
       .cookie("token", token, {
@@ -69,13 +73,12 @@ const signUp = async (req, res, next) => {
       });
       // log user in
       const token = jwt.sign(
-        { id: addUser.id, username: "ben" },
+        { id: addUser.id, userType: addUser.userType },
         process.env.SECRET_KEY,
         {
           expiresIn: "2h",
         }
       );
-
       return res
         .cookie("token", token, {
           httpOnly: true,
@@ -92,7 +95,6 @@ const signUp = async (req, res, next) => {
 
 const logout = async (req, res, next) => {
   try {
-    dd;
     res
       .clearCookie("token", "", {
         httpOnly: true,
