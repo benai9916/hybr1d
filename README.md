@@ -41,8 +41,8 @@ Base url : `/api/seller`
 ```
 
 - Get catalog list
-  Method: 'GET'
-  End point: /`:sellerId`/get-catalog
+	- Method: 'GET'
+	- End point: /`:sellerId`/get-catalog
   
 - Get Orders
   Method: 'GET'
