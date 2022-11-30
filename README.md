@@ -42,7 +42,7 @@ Base url : `/api/seller`
 
 - Get catalog list
   Method: 'GET'
-  End point: /:sellerId/get-catalog
+  End point: /`:sellerId`/get-catalog
   
 - Get Orders
   Method: 'GET'
@@ -50,6 +50,35 @@ Base url : `/api/seller`
   
 ### Buyer Route
 
+- Seller List
+  Method: 'GET'
+  End Point: /list-of-sellers
+  
+- Get Seller Catalog
+   Methos: 'GET'
+   End Point: /seller-catalog/`:sellerId`
+   
+- Place order
+  Method: 'POST'
+  End point: /create-order/`:sellerId`
+  Request Body: 
+ ```
+ {
+"data": [
+    {
+	"id": 1,
+	"name": "tets",
+	"price": 123333.33,
+	"userId": 1
+    }]
+}
+ ```
+ 
+-  Get Placed Order
+   Method: 'GET'
+   End Point: /get-order/`:buyerId`
+   
+   
   
   
   
