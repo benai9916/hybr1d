@@ -6,8 +6,8 @@
 ### End points
 - Signup 
   Method: 'POST'
-  /api/auth/signup (for both buyer and seller)
-  Body
+  End Point: /api/auth/signup (for both buyer and seller)
+  Request Body
   ```
   {
 	  "username": "",
@@ -17,8 +17,8 @@
   ```
 - Login
   Method: 'POST'
-  /api/auth/login (for both buyer and seller)
-  Body
+  End Point: /api/auth/login (for both buyer and seller)
+  Request Body
   ```
   {
 	  "username": "",
