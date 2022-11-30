@@ -30,8 +30,8 @@
 Base url : `/api/seller`
 
 - Create catalog
-  Method: 'POST'
-  End point : /create-catalog
+  Method: 'POST' \n
+  End point : /create-catalog \n
   Request Body: 
 ```
 {
