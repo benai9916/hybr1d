@@ -30,7 +30,7 @@
   
 ### Seller Route
 
-- ### Create catalog
+- #### Create catalog
 	- Method: 'POST' \n
 	- End point : /create-catalog \n
 	- Request Body: 
