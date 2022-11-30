@@ -3,8 +3,6 @@
 - node index.js or nodemon index.jsx
 - Server will be listening to port 5000
 
-### Base url : `/api/seller`
-
 ### End points
 - Signup 
 	- Method: 'POST'
@@ -29,7 +27,7 @@
 	  ```
   
 ### Seller Route
-
+###$ Base url : `/api/seller`
 - #### Create catalog
 	- Method: 'POST' \n
 	- End point : /create-catalog \n
@@ -41,25 +39,25 @@
 	}
 	```
 
-- Get catalog list
+- #### Get catalog list
 	- Method: 'GET'
 	- End point: /`:sellerId`/get-catalog
   
-- Get Orders
+- #### Get Orders
 	- Method: 'GET'
   	- End Point: /orders
   
 ### Buyer Route
-
-- Seller List
+#### Base url : `/api/buyer`
+- #### Seller List
 	- Method: 'GET'
 	- End Point: /list-of-sellers
   
-- Get Seller Catalog
+- #### Get Seller Catalog
 	- Methos: 'GET'
 	- End Point: /seller-catalog/`:sellerId`
    
-- Place order
+- #### Place order
 	- Method: 'POST'
 	- End point: /create-order/`:sellerId`
 	- Request Body: 
@@ -75,7 +73,7 @@
 	}
 	 ```
  
--  Get Placed Order
+-  #### Get Placed Order
 	-  Method: 'GET'
 	-  End Point: /get-order/`:buyerId`
    
