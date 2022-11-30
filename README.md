@@ -12,7 +12,7 @@
 	  {
 		  "username": "",
 		  "password": "",
-		  "userType": "seller | buyer"
+		  "userType": "" (either seller / buyer)
 	  }
 	  ```
 - Login
@@ -29,8 +29,8 @@
 ### Seller Route
 ###$ Base url : `/api/seller`
 - #### Create catalog
-	- Method: 'POST' \n
-	- End point : /create-catalog \n
+	- Method: 'POST'
+	- End point : /create-catalog 
 	- Request Body: 
 	```
 	{
