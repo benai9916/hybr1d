@@ -62,28 +62,6 @@ const placeOrder = async (req, res, next) => {
         },
       });
     }
-    // if (order) {
-    //   return res.status(200).json(success("Success", res.statusCode));
-    // } else {
-    //   return res
-    //     .status(500)
-    //     .json(
-    //       success("Something went wrong, please try again.", res.statusCode)
-    //     );
-    // }
-    // const order = await prisma.order.create({
-    //   data: {
-    //     catalog: {
-    //       connect: {id: id}
-    //     },
-    //     auth: {
-    //       connect: {id: req.id}
-    //     },
-    //     name: name,
-    //     price: price,
-    //     sellerId: sellerId,
-    //   },
-    // });
     if (order) {
       return res.status(200).json(success("Success", res.statusCode));
     } else {
